@@ -5,7 +5,10 @@ import Navbar from './componentes/navbar/index';
 const App = () => {
   return (
     <>
+    <header>
       <Navbar />
+    </header>
+      
     </>
   );
 }

@@ -1,38 +1,29 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CartWidget from '../cartWidget';
+import './navbar.scss';
+import nikelogo from '../../assets/nikelogo.png';
 
 const Navbar = () => {
   return (
     <>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container">
-                <a className="navbar-brand" href="#">Nike</a>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav ml-auto">
-                    <li className="nav-item active">
-                        <a className="nav-link" href="#">Hombre<span className="sr-only">(current)</span></a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Mujer</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Niños</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Calzado</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Accesorios</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Sale</a>
-                    </li>
-                    </ul>
-                </div>
-            </div> 
+        <nav className="navbar container d-flex justify-content-space-between align-items-center fixed">
+          <input type="checkbox" id="btn-menu"/>
+            <label htmlFor="btn-menu" className="lbl-menu">
+              <span className="span1"></span>
+              <span className="span2"></span>
+              <span className="span3"></span>
+            </label>
+          <div className="menu">
+          <ul>
+            <li>Hombre</li>
+            <li>Mujer</li>
+            <li>Niños</li>
+            <li>Accesorios</li>
+            <li>Sale</li>
+          </ul>
+          </div>
+          <a href="#"><img src={nikelogo} alt="" className="nike-logo"/></a>           
+          <CartWidget />
         </nav>
     </>
   );

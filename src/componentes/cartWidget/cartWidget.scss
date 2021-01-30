@@ -1,0 +1,26 @@
+.cart-widget-container {
+    position: relative;
+
+}
+
+.cart-widget {
+    width: 30px;
+    height: auto;
+}
+
+.carrito-numeros {
+    position: absolute;
+    top: 40%;
+    left: -35%;
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    background-color: rgb(197, 0, 0);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2px;
+    font-weight: 600;
+    cursor: pointer;
+}
