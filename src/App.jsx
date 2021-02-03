@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './componentes/navbar/index';
-import ItemListContainer from './containers/itemListContainer';
+import ItemListContainer from './containers/ItemListContainer';
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
       <header>
         <Navbar />
       </header> 
-      <ItemListContainer greeting={"Bienvenidos a Nike"} />
+      <ItemListContainer />
     </>
   );
 }

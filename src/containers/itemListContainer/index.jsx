@@ -1,10 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './itemListContainer.scss';
+import slide from '../../assets/slider6.jpg'
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
   return (
     <>
-        <h1>{greeting}</h1>
+      <div className="slider">
+        <img src={slide} alt=""className="img-fluid" />
+      </div>
     </>
   );
 }
