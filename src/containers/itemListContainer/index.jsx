@@ -29,7 +29,6 @@ const ItemListContainer = (props) => {
     }else {
       alert(`Agregaste al carrito ${contador} producto`);
     }
-    
   }
   //retornar al html
   return (

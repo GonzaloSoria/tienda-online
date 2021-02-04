@@ -1,26 +1,3 @@
-// .App {
-//   text-align: center;
-// }
-
-// .App-logo {
-//   height: 40vmin;
-//   pointer-events: none;
-// }
-
-// @media (prefers-reduced-motion: no-preference) {
-//   .App-logo {
-//     animation: App-logo-spin infinite 20s linear;
-//   }
-// }
-
-// .App-header {
-//   background-color: #282c34;
-//   min-height: 100vh;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   font-size: calc(10px + 2vmin);
 //Estilos del Navbar
 .navbar {
   width: 100%;
@@ -111,10 +88,9 @@
           &:last-child {
               color: rgb(197, 0, 0);
           }
-          a {
-              text-decoration: none;
-              color: black;
-              
+          a { 
+            text-decoration: none;
+            color: black;
           }
       }
   }
@@ -182,20 +158,39 @@
 }
 
 .agregar-carrito-container {
-  margin: 0;
+  margin-bottom: 15px;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 0;
   button {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 150px;
       padding: 5px 5px;
       border: 2px solid black;
       font-weight: 600;
-      &:hover {
-          background-color: black;
-          color: #fff;
+      color: black;
+      background-color: #fff;
+      &:hover ~ button:last-child {
+        clip-path: polygon(0% 0%, 100% 0, 100% 53%, 100% 100%, 0% 100%);
       }
   }
 }
-//Fin estilos ItemCount
 
+.agregar-carrito-container button:nth-child(2){
+  color: #fff;
+  background-color: black;
+  overflow: hidden;
+  z-index: 2;
+  transition: 0.5s;
+  clip-path: polygon(0% 0%, 0 0, 0 54%, 0 100%, 0 100%);
+  &:hover {
+    clip-path: polygon(0% 0%, 100% 0, 100% 53%, 100% 100%, 0% 100%);
+  }
+}
+//Fin estilos ItemCount
 //Estilos Desktop
 @media only screen and (min-width: 950px) {
   //estilos del navbar
