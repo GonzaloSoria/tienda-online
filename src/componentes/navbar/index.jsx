@@ -1,7 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import CartWidget from '../cartWidget';
-import './navbar.scss';
-import nikelogo from '../../assets/nike-logo.png';
+import CartWidget from '../CartWidget';
 
 const Navbar = () => {
   return (
@@ -23,7 +20,7 @@ const Navbar = () => {
                 <li><a href="">Sale</a></li>
               </ul>
             </div>
-            <a href="#"><img src={nikelogo} alt="" className="nike-logo"/></a>           
+            <a href="#"><img src="/assets/nike-logo.png" alt="" className="nike-logo"/></a>           
             <CartWidget />
           </nav>
     </>

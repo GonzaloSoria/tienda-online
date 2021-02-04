@@ -1,0 +1,231 @@
+// .App {
+//   text-align: center;
+// }
+
+// .App-logo {
+//   height: 40vmin;
+//   pointer-events: none;
+// }
+
+// @media (prefers-reduced-motion: no-preference) {
+//   .App-logo {
+//     animation: App-logo-spin infinite 20s linear;
+//   }
+// }
+
+// .App-header {
+//   background-color: #282c34;
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: calc(10px + 2vmin);
+//Estilos del Navbar
+.navbar {
+  width: 100%;
+  height: 70px;
+  background-color: #F5F5F5;
+  z-index: 400;
+}
+
+//estilos icono del menu
+.lbl-menu {
+  width: 50px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.span1, .span2, .span3 {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 5px;
+  background-color: rgb(48, 48, 48);
+  transition: all 400ms ease;
+}
+
+.span2 {
+  margin-top: 11px;
+  width: 20px;
+}
+
+.span3 {
+  margin-top: 22px;
+  width: 30px;
+}
+
+#btn-menu {
+  display: none;
+}
+
+//animación para que el icono del menu se vuelva una X para cerrarlo
+#btn-menu:checked ~ .lbl-menu .span1 {
+  transform: rotate(140deg);
+  top: 10px;
+}
+
+#btn-menu:checked ~ .lbl-menu .span2 {
+  opacity: 0;
+}
+
+#btn-menu:checked ~ .lbl-menu .span3 {
+  transform: rotate(-140deg);
+  width: 30px;
+  top: -12px;
+}
+//fin estilos del icono de menu
+//Estilo nike logo
+.nike-logo {
+  width: 60px;
+  height: auto;
+}
+//fin estilo nike logo
+//estilo menu
+.menu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 0%;
+  height: 100vh;
+  background-color: #F5F5F5;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 200ms;
+  ul {
+      padding: 0;
+      margin-bottom: 50px;
+      li {
+          font-family: 'Oswald', sans-serif;
+          font-size: 1.4rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          list-style: none;
+          padding: 1rem;
+          &:last-child {
+              color: rgb(197, 0, 0);
+          }
+          a {
+              text-decoration: none;
+              color: black;
+              
+          }
+      }
+  }
+}
+
+#btn-menu:checked ~ .menu {
+  width: 100%;
+}
+//fin estilos menu
+//Estilos cartWidget
+.cart-widget-container {
+  position: relative;
+
+}
+
+.cart-widget {
+  width: 30px;
+  height: auto;
+}
+
+.carrito-numeros {
+  position: absolute;
+  top: 40%;
+  left: -35%;
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+  background-color: rgb(197, 0, 0);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2px;
+  font-weight: 600;
+  cursor: pointer;
+}
+//fin estilos CartWidget
+//Fin estilos del Navbar
+//Estilos ItemListContainer
+.slider {
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+//fin estilos ItemListContainer
+//Estilos ItemCount
+.buttons-container {
+  margin-top: 50px;
+  button {
+      font-weight: 600;
+      font-size: 1.5rem;
+      border: none;
+      background-color: #f5f5f5;
+      color: black;
+      width: 40px;
+      height: 50px;
+      padding: 0;
+  }
+  b {
+      padding: 0px 10px;
+      font-weight: 800;
+      font-size: 1.5rem;
+      margin: 0px 10px;
+  }
+}
+
+.agregar-carrito-container {
+  margin: 0;
+  button {
+      width: 150px;
+      padding: 5px 5px;
+      border: 2px solid black;
+      font-weight: 600;
+      &:hover {
+          background-color: black;
+          color: #fff;
+      }
+  }
+}
+//Fin estilos ItemCount
+
+//Estilos Desktop
+@media only screen and (min-width: 950px) {
+  //estilos del navbar
+  .navbar {
+      padding: 0px 80px;
+  }
+
+  .lbl-menu {
+      display: none;
+  }
+  .menu {
+      width: 100%;
+      height: 50px;
+      display: inline;
+      background-color: transparent;
+      ul {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         position: fixed;
+         top: 5px;
+         width: 100%;
+         text-align: center;
+      }
+      .social-media {
+          display: none;
+      }  
+  }
+  //estilos ItemListContainer
+  .slider {
+    padding-top: 60px;
+  }
+}

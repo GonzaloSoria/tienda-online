@@ -1,6 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './componentes/navbar/index';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss';
+import Navbar from './componentes/Navbar/index';
 import ItemListContainer from './containers/ItemListContainer';
 
 const App = () => {
