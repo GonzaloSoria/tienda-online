@@ -12,12 +12,12 @@ const Navbar = () => {
               </label>
             <div className="menu">
               <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Hombre</a></li>
-                <li><a href="">Mujer</a></li>
-                <li><a href="">Niños</a></li>
-                <li><a href="">Accesorios</a></li>
-                <li><a href="">Sale</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Hombre</a></li>
+                <li><a href="#">Mujer</a></li>
+                <li><a href="#">Niños</a></li>
+                <li><a href="#">Accesorios</a></li>
+                <li><a href="#">Sale</a></li>
               </ul>
             </div>
             <a href="#"><img src="/assets/nike-logo.png" alt="" className="nike-logo"/></a>           

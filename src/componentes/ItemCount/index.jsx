@@ -9,7 +9,6 @@ export const ItemCount = ({stock, onAdd, contador, onSubstract, agregarAlCarrito
             </div>
             <div className="agregar-carrito-container">
                 <button onClick={agregarAlCarrito} >Agregar al Carrito</button>
-                <button onClick={agregarAlCarrito} >Agregar al Carrito</button>
             </div> 
             </div>
             

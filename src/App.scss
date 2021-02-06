@@ -159,38 +159,50 @@
 
 .agregar-carrito-container {
   margin-bottom: 15px;
-  display: inline-block;
-  position: relative;
-  top: 0;
-  left: 0;
   button {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 150px;
       padding: 5px 5px;
       border: 2px solid black;
       font-weight: 600;
       color: black;
       background-color: #fff;
-      &:hover ~ button:last-child {
-        clip-path: polygon(0% 0%, 100% 0, 100% 53%, 100% 100%, 0% 100%);
+      transition: all .4s ease;
+      &:hover {
+        background-color: black;
+        color: #fff;
       }
   }
 }
 
-.agregar-carrito-container button:nth-child(2){
-  color: #fff;
-  background-color: black;
-  overflow: hidden;
-  z-index: 2;
-  transition: 0.5s;
-  clip-path: polygon(0% 0%, 0 0, 0 54%, 0 100%, 0 100%);
-  &:hover {
-    clip-path: polygon(0% 0%, 100% 0, 100% 53%, 100% 100%, 0% 100%);
-  }
-}
 //Fin estilos ItemCount
+//estilos itemlist
+.item-list-container {
+  display: flex;
+  justify-content: center;
+}
+//Fin estilos itemlist
+//Estilos card Item
+.item-container {
+    //  width: 160px;
+    // height: auto;
+    border-radius: 20px;
+    text-align: center;
+    margin: 0px 10px;
+    img {
+      // width: 100%;
+      // height: 100%;
+      overflow:hidden
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 800;
+    }
+    p {
+      padding-bottom: 20px;
+    }
+}
+//fin estilos card Item
+
 //Estilos Desktop
 @media only screen and (min-width: 950px) {
   //estilos del navbar
