@@ -3,15 +3,15 @@ import { Item } from "../Item";
 export const ItemList = ({productos}) => {
     return (
         <>
-            <div className="item-list-container container my-5">
-                {productos.map((producto) => {
-                    return (
-                        <>
-                            <Item key={producto.id} producto={producto}/>
-                        </>
+        <div className="container">
+            <div className="row d-flex justify-content-center">
+                {productos.map((producto) => { 
+                    return (                        
+                        <Item key={producto.id} producto={producto}/>                                            
                     )
-                })}
+                })}            
             </div>
+        </div> 
         </>
     );
 };
