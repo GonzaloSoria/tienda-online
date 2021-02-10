@@ -1,10 +1,10 @@
-export const ItemDetail = ({producto}) => {
+export const ItemDetail = ({itemDetail}) => {
     return (
         <>
-            <div>
-                <img src={producto.imagen} alt=""/>
-                <h2>{producto.nombre}</h2>
-                <h3>{producto.precio}</h3>
+            <div className="container">
+                <img src={itemDetail.imagen} alt=""/>
+                <h2>{itemDetail.nombre}</h2>
+                <h3>{itemDetail.precio}</h3>
             </div>
         </>
     )

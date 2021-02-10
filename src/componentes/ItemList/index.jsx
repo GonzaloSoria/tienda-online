@@ -1,4 +1,5 @@
 import { Item } from "../Item";
+import { ItemDetailContainer } from "../ItemDetailContainer";
 
 export const ItemList = ({productos}) => {
     return (
@@ -12,6 +13,7 @@ export const ItemList = ({productos}) => {
                 })}            
             </div>
         </div> 
+        <ItemDetailContainer />
         </>
     );
 };
