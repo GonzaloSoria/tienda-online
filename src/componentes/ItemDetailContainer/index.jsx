@@ -43,9 +43,9 @@ export const ItemDetailContainer = () => {
     //funcion para agregar al carrito
     const agregarAlCarrito = () => {
         if(contador > 1) {
-        alert(`Agregaste al carrito ${contador} productos`);
+            alert(`Agregaste al carrito ${contador} productos`);
         }else {
-        alert(`Agregaste al carrito ${contador} producto`);
+            alert(`Agregaste al carrito ${contador} producto`);
         }
     }
 

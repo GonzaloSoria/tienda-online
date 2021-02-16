@@ -1,17 +1,16 @@
 export const ItemCount = ({stock, sumar, contador, restar, agregarAlCarrito}) => {
     return (
         <>
-            <div className="container">
-            <div className="buttons-container">
-                <button onClick={restar}>-</button>
-                <b>{contador}</b>
-                <button onClick={()=> {sumar(stock)}}>+</button>
+            <div>
+                <div className="buttons-container">
+                    <button onClick={restar} className="btn btn-secondary">-</button>
+                    <b className="px-5">{contador}</b>
+                    <button onClick={()=> {sumar(stock)}} className="btn btn-secondary">+</button>
+                </div>
+                <div className="agregar-carrito-container">
+                    <button onClick={agregarAlCarrito} >Agregar al Carrito</button>
+                </div> 
             </div>
-            <div className="agregar-carrito-container">
-                <button onClick={agregarAlCarrito} >Agregar al Carrito</button>
-            </div> 
-            </div>
-            
         </>
     )
 }
