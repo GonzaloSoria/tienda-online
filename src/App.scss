@@ -85,12 +85,11 @@
           text-transform: uppercase;
           list-style: none;
           padding: 1rem;
-          &:last-child {
-              color: rgb(197, 0, 0);
           }
-          a { 
-            text-decoration: none;
+          a {
             color: black;
+            &:hover {
+            text-decoration: none;
           }
       }
   }
