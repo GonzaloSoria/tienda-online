@@ -14,7 +14,6 @@ export const ItemList = ({productos}) => {
                 })}            
             </div>
         </div> 
-        <ItemDetailContainer />
         </>
     );
 };
