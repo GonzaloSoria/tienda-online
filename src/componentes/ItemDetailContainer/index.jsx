@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import {useParams} from 'react-router-dom';
 import dataBase from '../../data-base';
 import { ItemDetail } from "../ItemDetail";
-import { ItemCount } from "../ItemCount"
+
 
 
 
@@ -51,8 +51,7 @@ export const ItemDetailContainer = () => {
 
     return (
         <>
-            <ItemDetail itemDetail={itemDetail} />
-            <ItemCount stock={20} contador={contador} sumar={sumar} restar={restar} agregarAlCarrito={agregarAlCarrito} />
+            <ItemDetail itemDetail={itemDetail} stock={20} contador={contador} sumar={sumar} restar={restar} agregarAlCarrito={agregarAlCarrito}/>
         </>
     )
 }

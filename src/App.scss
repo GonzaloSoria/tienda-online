@@ -180,12 +180,34 @@
     margin: 20px 10px;
     text-align: center;
     border-radius: 10px;
-    h3 {
-      font-family: 'Oswald', sans-serif;
-      font-weight: 800;
-    }
+    a {
+      color: black;
+      &:hover {
+        text-decoration: none;
+      }
+      h3 {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 800;
+      }
+    }   
 }
 //fin estilos card Item
+// estilos ItemDetail
+.detalles-producto {
+  margin-top: 50px;
+  h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+  }
+  h3 {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+  p {
+    margin-top: 10px;
+    font-weight: 700;
+  }
+}
 
 //Estilos Desktop
 @media only screen and (min-width: 950px) {
@@ -218,5 +240,9 @@
   //estilos ItemListContainer
   .slider {
     padding-top: 60px;
+  }
+  //estilos ItemDetail
+  .detalles-producto {
+    padding-left: 100px;
   }
 }
