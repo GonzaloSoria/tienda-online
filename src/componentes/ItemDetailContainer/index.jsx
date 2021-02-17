@@ -24,6 +24,8 @@ export const ItemDetailContainer = () => {
 
      //Estado del contador
     const [contador, setContador] = useState(1)
+    //Estado de ir al carrito
+    const [irAlCarrito, setIrAlCarrito] = useState(false);
     //funcion para sumar productos
     const sumar = (stock) => {
         if (contador < stock) {
@@ -40,18 +42,22 @@ export const ItemDetailContainer = () => {
         alert("no podes comprar menos de 1 producto");
         }   
     }
-    //funcion para agregar al carrito
+    //funcion para agregar al carrito y mostrar el boton ir al carrito
     const agregarAlCarrito = () => {
         if(contador > 1) {
             alert(`Agregaste al carrito ${contador} productos`);
+            setIrAlCarrito(true);
         }else {
             alert(`Agregaste al carrito ${contador} producto`);
+            setIrAlCarrito(true);
         }
     }
+    
+
 
     return (
         <>
-            <ItemDetail itemDetail={itemDetail} stock={20} contador={contador} sumar={sumar} restar={restar} agregarAlCarrito={agregarAlCarrito}/>
+            <ItemDetail itemDetail={itemDetail} stock={20} contador={contador} sumar={sumar} restar={restar} agregarAlCarrito={agregarAlCarrito} irAlCarrito={irAlCarrito} />
         </>
     )
 }
