@@ -1,4 +1,5 @@
 export const ItemCount = ({stock, sumar, contador, restar, agregarAlCarrito}) => {
+    
     return (
         <>
             <div>

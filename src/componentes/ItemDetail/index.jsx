@@ -12,10 +12,9 @@ export const ItemDetail = ({itemDetail, stock, contador, sumar, restar, agregarA
                         <h2>{itemDetail.nombre}</h2>
                         <h3>${itemDetail.precio} ARS</h3>
                         <p className="text-black-50">Stock disponible: {stock} unidades</p>
-                        {irAlCarrito ? <button className="carrito-button">Ir al Carrito</button> : <ItemCount stock={20} contador={contador} sumar={sumar} restar={restar} agregarAlCarrito={agregarAlCarrito} /> }
-                        
+                        <ItemCount stock={20} contador={contador} sumar={sumar} restar={restar} agregarAlCarrito={agregarAlCarrito} /> 
                     </div>
-                </div>          
+                </div>           
             </div>
         </>
     )
