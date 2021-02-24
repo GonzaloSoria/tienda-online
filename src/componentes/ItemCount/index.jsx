@@ -1,4 +1,27 @@
-export const ItemCount = ({stock, sumar, contador, restar, agregarAlCarrito}) => {
+import { useState } from 'react';
+
+export const ItemCount = ({stock, agregarAlCarrito}) => {
+     const [contador, setContador] = useState(1)
+     //funcion para sumar productos
+     const sumar = (stock) => {
+         if (contador < stock) {
+             setContador(contador + 1);
+         }else {
+             alert("no hay mas stock");
+         }
+     }
+     //funcion para restar productos
+     const restar = () => {
+         if(contador > 1) {
+             setContador(contador - 1);
+         }else {
+             alert("no podes comprar menos de 1 producto");
+         }   
+     }
+
+     const handleAgregarCarrito = () => {
+         agregarAlCarrito(contador)
+     }
     
     return (
         <>
@@ -9,7 +32,7 @@ export const ItemCount = ({stock, sumar, contador, restar, agregarAlCarrito}) =>
                     <button onClick={()=> {sumar(stock)}} className="btn btn-secondary">+</button>
                 </div>
                 <div className="agregar-carrito-container">
-                    <button onClick={agregarAlCarrito} className="carrito-button">Agregar al Carrito</button>
+                    <button onClick={handleAgregarCarrito} className="carrito-button">Agregar al Carrito</button>
                 </div> 
             </div>
         </>
