@@ -1,7 +1,10 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const ItemCount = ({stock, agregarAlCarrito}) => {
      const [contador, setContador] = useState(1)
+     const [irAlCarrito, setIrAlCarrito] = useState(false)
+     
      //funcion para sumar productos
      const sumar = (stock) => {
          if (contador < stock) {
@@ -21,6 +24,7 @@ export const ItemCount = ({stock, agregarAlCarrito}) => {
 
      const handleAgregarCarrito = () => {
          agregarAlCarrito(contador)
+         setIrAlCarrito(true)
      }
     
     return (
@@ -32,7 +36,7 @@ export const ItemCount = ({stock, agregarAlCarrito}) => {
                     <button onClick={()=> {sumar(stock)}} className="btn btn-secondary">+</button>
                 </div>
                 <div className="agregar-carrito-container">
-                    <button onClick={handleAgregarCarrito} className="carrito-button">Agregar al Carrito</button>
+                    {irAlCarrito ? <Link to={`/carrito`}><button className="carrito-button">Ir al Carrito</button></Link> : <button onClick={handleAgregarCarrito} className="carrito-button">Agregar al Carrito</button>}     
                 </div> 
             </div>
         </>

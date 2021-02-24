@@ -10,16 +10,18 @@ export const CartProvider = ({children}) => {
 
     //obtener el indice del producto
     const isInCart = (id) => {
-        return carrito.findIndex(prod => prod.id === id)
+        return carrito.findIndex(prod => prod.item.id === id)
     }
 
-    //funcion para no duplicar productos, si hay 2 del mismo sumarlos
+    //funcion para no duplicar productos en el carrito y sumar los que sean iguales
     const addCart = (item) => {
-        let estaCarrito = isInCart(item.itemDetail.id)
+        let estaCarrito = isInCart(item.item.id)
         if (estaCarrito === -1){
-            setCarrito(item)
+            setCarrito([...carrito, item])
         }else{
-            setCarrito(carrito[estaCarrito].quantity = carrito[estaCarrito].quantity + carrito.quantity)
+            let NuevoItem = {...carrito[estaCarrito], quantity:  carrito[estaCarrito].quantity + item.quantity}
+            let listaNueva = carrito.filter(prod => item.item.id !== prod.item.id)
+            setCarrito([...listaNueva, NuevoItem])
         }
     }
       

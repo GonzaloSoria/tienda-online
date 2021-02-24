@@ -21,8 +21,9 @@ const Navbar = () => {
                 <li><Link to={`/categoria/sale`}>Sale</Link></li>      
               </ul>
             </div>
-            <Link to={`/`}><img src="/assets/nike-logo.png" alt="" className="nike-logo"/></Link>          
-            <CartWidget />
+            <Link to={`/`}><img src="/assets/nike-logo.png" alt="" className="nike-logo"/></Link>  
+            <Link to={`/carrito`}><CartWidget /></Link>        
+            
           </nav>
     </>
   );

@@ -7,7 +7,7 @@ export const ItemDetail = ({itemDetail}) => {
 
     //funcion para agregar al carrito
     const agregarAlCarrito = (contador) => {
-        addCart([...carrito, {item: itemDetail, quantity: contador}])
+        addCart({item: itemDetail, quantity: contador})
     }
 
     return (
@@ -21,7 +21,7 @@ export const ItemDetail = ({itemDetail}) => {
                         <h2>{itemDetail.nombre}</h2>
                         <h3>${itemDetail.precio} ARS</h3>
                         <p className="text-black-50">Stock disponible: {itemDetail.stock} unidades</p>
-                        <ItemCount agregarAlCarrito={agregarAlCarrito} stock={itemDetail.stock} /> 
+                        <ItemCount agregarAlCarrito={agregarAlCarrito} stock={itemDetail.stock}/> 
                     </div>
                 </div>           
             </div>
