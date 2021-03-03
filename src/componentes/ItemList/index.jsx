@@ -1,6 +1,4 @@
 import { Item } from "../Item";
-import { ItemDetailContainer } from "../ItemDetailContainer";
-
 
 export const ItemList = ({productos}) => {
     return (

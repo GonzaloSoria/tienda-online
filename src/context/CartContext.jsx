@@ -7,7 +7,7 @@ export const CartContext = createContext()
 export const CartProvider = ({children}) => {
     const [carrito, setCarrito] = useState([])
     console.log(carrito);
-
+    
     //obtener el indice del producto
     const isInCart = (id) => {
         return carrito.findIndex(prod => prod.item.id === id)
@@ -24,10 +24,17 @@ export const CartProvider = ({children}) => {
             setCarrito([...listaNueva, NuevoItem])
         }
     }
-      
+    
+    //obtener la cantidad de productos en el carrito para pasarlo al CartWidget
+    const cantidadCarrito = carrito.reduce((acc, el) => {
+        return acc = acc + el.quantity;
+    }, 0)
+
+    console.log(cantidadCarrito);
+
     return (
         <>
-            <CartContext.Provider value={{carrito, addCart}}>
+            <CartContext.Provider value={{carrito, addCart, cantidadCarrito}}>
                 {children}
             </CartContext.Provider>
         </>   
