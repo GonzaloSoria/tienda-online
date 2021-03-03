@@ -3,7 +3,7 @@ import { CartContext } from '../../context/CartContext';
 import { CartDetail } from '../CartDetail';
 
 const Cart = () => {
-    const { carrito } = useContext(CartContext)
+    const { carrito, totalAPagar } = useContext(CartContext)
 
     return (
         <>
@@ -15,7 +15,10 @@ const Cart = () => {
                             <CartDetail key={carritoDetalles.id} carritoDetalles={carritoDetalles}/>
                         )
                     })}  
-                </div>                         
+                </div> 
+                <div className="container">
+                    <h4>total a pagar: ${totalAPagar}</h4>
+                </div>                        
             </div>
         </>
     )

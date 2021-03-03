@@ -30,11 +30,24 @@ export const CartProvider = ({children}) => {
         return acc = acc + el.quantity;
     }, 0)
 
-    console.log(cantidadCarrito);
+    //sumar precios de productos individuales
+    const precioTotalPorProducto = () => {
+        if(carrito.item.id === carrito.item.id){
+            return carrito.quantity * carrito.item.precio
+        }
+    }
+
+    console.log(precioTotalPorProducto);
+
+    //Sumar el precio total
+    const totalAPagar = carrito.reduce((acc, el) => {
+        return acc = acc + el.quantity * el.item.precio;
+    }, 0)
+    console.log(totalAPagar);
 
     return (
         <>
-            <CartContext.Provider value={{carrito, addCart, cantidadCarrito}}>
+            <CartContext.Provider value={{carrito, addCart, cantidadCarrito, totalAPagar}}>
                 {children}
             </CartContext.Provider>
         </>   
