@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import dataBase from '../../data-base';
 import { ItemCount } from '../../componentes/ItemCount';
 import { ItemList } from '../../componentes/ItemList';
+import { getFirestore } from '../../firebase';
 
 
 
@@ -13,18 +14,31 @@ const ItemListContainer = (props) => {
   const [productos, setProductos] = useState([])
   const {id} = useParams()
   useEffect(() => {
-    const promesa = new Promise( (resolve, reject) => {
-      resolve(dataBase)
-    });
-    promesa.then((result) => {
-      if(id === undefined){
-        setProductos(result);
-      }else{
-        setProductos(result.filter(productos => productos.categoria === id))
-      } 
+    const db = getFirestore();
+    // const itemCollection = db.collection('productos');
+    // itemCollection.get().then((value) => {
+      // if (id === undefined) {
+      //   let aux = value.docs.map(element => {
+      //     return element.data
+      //   })
+      //   setProductos(aux)
+      // }else{
+      //   let auxDos = value.docs.filter(productos => productos.categoriaID === id)
+      //   setProductos(auxDos)
+      // }
     })
-  },[id]);
-
+    // const promesa = new Promise( (resolve, reject) => {
+    //   resolve(dataBase)
+    // });
+    // promesa.then((result) => {
+    //   if(id === undefined){
+    //     setProductos(result);
+    //   }else{
+    //     setProductos(result.filter(productos => productos.categoria === id))
+    //   } 
+    // })
+  // },[id]);
+ 
  
   
   return (

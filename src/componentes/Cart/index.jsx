@@ -7,9 +7,8 @@ const Cart = () => {
 
     return (
         <>
-
             <div className="container py-5">
-                <div className="row d-flex justify-content-center align-items-center carrito-container py-5">
+                <div className="row carrito-container text-center align-items-center">
                     {carrito.map((carritoDetalles) => {
                         return (
                             <CartDetail key={carritoDetalles.id} carritoDetalles={carritoDetalles}/>

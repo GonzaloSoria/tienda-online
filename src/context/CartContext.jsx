@@ -31,13 +31,6 @@ export const CartProvider = ({children}) => {
     }, 0)
 
     //sumar precios de productos individuales
-    const precioTotalPorProducto = () => {
-        if(carrito.item.id === carrito.item.id){
-            return carrito.quantity * carrito.item.precio
-        }
-    }
-
-    console.log(precioTotalPorProducto);
 
     //Sumar el precio total
     const totalAPagar = carrito.reduce((acc, el) => {
